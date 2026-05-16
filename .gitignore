@@ -1,0 +1,14 @@
+# Flutter
+pocket_court_app/build/
+pocket_court_app/.dart_tool/
+pocket_court_app/.flutter-plugins
+pocket_court_app/.flutter-plugins-dependencies
+pocket_court_app/pubspec.lock
+
+# Android
+pocket_court_app/android/.gradle/
+pocket_court_app/android/app/build/
+
+# Node
+pocket-court-backend/node_modules/
+pocket-court-backend/.env
