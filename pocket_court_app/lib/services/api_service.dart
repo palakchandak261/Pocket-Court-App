@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
+import 'dart:io' show SocketException;
 import 'package:http/http.dart' as http;
 import '../models/category_model.dart';
 import '../models/law_model.dart';
@@ -13,12 +13,8 @@ import '../models/law_model.dart';
 /// For production:               https://api.pocketcourt.app/api
 class ApiService {
   // ── Base URL ──────────────────────────────────────────────────────────────
-  // Android emulator uses 10.0.2.2 to reach the host machine's localhost.
-  // iOS simulator can use localhost directly.
-  static String get baseUrl {
-    if (Platform.isAndroid) return 'http://10.0.2.2:5000/api';
-    return 'http://localhost:5000/api';
-  }
+  // Production backend deployed on Render.
+  static String get baseUrl => 'https://pocket-court-app-1.onrender.com/api';
 
   static const _timeout = Duration(seconds: 10);
   static const _headers = {'Content-Type': 'application/json'};
